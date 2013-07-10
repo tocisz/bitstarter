@@ -87,7 +87,6 @@ if(require.main == module) {
         .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
         .option('-u, --url <URL>', 'URL')
         .parse(process.argv);
-    var crio;
     if (program.url) {
       cheerioURLAsync(program.url, main);
     } else {
