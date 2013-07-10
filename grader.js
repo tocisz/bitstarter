@@ -89,10 +89,9 @@ if(require.main == module) {
         .parse(process.argv);
     var crio;
     if (program.url) {
-      crio = cheerioURLAsync(program.url, main);
+      cheerioURLAsync(program.url, main);
     } else {
-      crio = cheerioHtmlFile(program.file);
-      main(crio);
+      main(cheerioHtmlFile(program.file));
     }
 } else {
     exports.checkHtmlFile = checkHtmlFile;
